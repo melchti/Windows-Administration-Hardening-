@@ -34,8 +34,11 @@ Task 3
 This policy uses the following template to log what is executed in the script block:
 
 $collection = 
+
    foreach ($item in $collection) {
+   
      <Everything here will get logged by this policy>
+     
 }
 
 I checked the Log script block invocation start/stop events: setting.
@@ -51,9 +54,13 @@ Task 4: Create a PowerShell script that will enumerate the Access Control List o
 1.	I created a foreach loop:
   
 $directory=Get-childitem .\
+
 foreach ($item in $directory) {
+
 	Get-Acl $item
+	
 }
+
   
 2.	I saved this script in C:\Users\sysadmin\Documents as enum_acls.ps.
   
